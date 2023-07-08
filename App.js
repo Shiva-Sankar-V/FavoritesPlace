@@ -17,11 +17,18 @@ export default function App() {
           <Stack.Screen
             name="All Places"
             component={AllPlaces}
-            options={{
+            options={({ navigation }) => ({
               headerRight: ({ tintColor }) => (
-                <IconButton icon="add" size={24} color={tintColor} />
+                <IconButton
+                  icon="add"
+                  size={24}
+                  color={tintColor}
+                  onPress={() => {
+                    navigation.navigate("Add Place");
+                  }}
+                />
               ),
-            }}
+            })}
           />
           <Stack.Screen name="Add Place" component={AddPlace} />
         </Stack.Navigator>

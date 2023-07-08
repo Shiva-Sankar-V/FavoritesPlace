@@ -9,7 +9,7 @@ const ImagePicker = () => {
       aspect: [16, 9],
       quality: 0.5,
     });
-    console.log(image);
+    // console.log(image);
   }
 
   return (
